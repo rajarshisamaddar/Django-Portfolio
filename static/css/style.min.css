@@ -910,7 +910,7 @@ section {
 
 @media (max-width: 767px) {
   .jumbotron h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   .grid-item {
     width: 100%;
