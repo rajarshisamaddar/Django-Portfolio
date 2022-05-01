@@ -1,0 +1,138 @@
+{% extends '__base.html' %} {% block __base %}
+<div
+  class="jumbotron jumbotron-single d-flex align-items-center"
+  style="background-image: url(img/bg.jpg)"
+>
+  <div class="container text-center">
+    <h1 class="display-2 mb-4">Contact Me</h1>
+  </div>
+</div>
+<!-- Contact Form Section -->
+<section id="contact-form" class="bg-white">
+  <div class="container">
+    <div class="section-content">
+      <!-- Section Title -->
+      <div class="title-wrap" data-aos="fade-up">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-sub-title">
+          I'm seeking out opportunities to collaborate with companies / agencies
+          / individuals, not just work for them. I want to bring my collective
+          programming experience to the table where we can work together to solve
+          real business-problems in a way that optimizes all of our respective
+          experience and knowledge.
+          <br />
+          <br />
+          I want to avoid subjective pissing-matches, and favor open-minded
+          collaborators where egos are out of the equation. If that all sounds
+          about right, then lets for sure chat about how we can work together.
+          <br />
+          <br />
+          Feel free to drop me a line.
+        </p>
+      </div>
+      <!-- End of Section Title -->
+      <div class="row">
+        <!-- Contact Form Holder -->
+        <div
+          class="col-md-8 offset-md-2 contact-form-holder mt-4"
+          data-aos="fade-up"
+        >
+          <form name="contact-us" action="message" method="post">
+            <div class="row">
+              <div class="col-md-12 form-group">
+                {% csrf_token %}
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="col-md-6 form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="col-md-6 form-group">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  placeholder="Phone"
+                  required
+                />
+              </div>
+              <div class="col-md-12 form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="websiteUrl"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="col-md-12 form-group">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Your Message ..."
+                  required
+                ></textarea>
+              </div>
+              <div class="col-md-12 text-center">
+                <button
+                  class="btn btn-primary btn-shadow btn-lg"
+                  type="submit"
+                  name="submit"
+                >
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- End of Contact Form Holder -->
+      </div>
+    </div>
+    <div class="section-content pt-0">
+      <div class="title-wrap" data-aos="fade-up">
+        <h2 class="section-title">Where To Find Me?</h2>
+      </div>
+      <div class="row text-center mt-4">
+        <div class="col-md-3" data-aos="fade-up">
+          <span class="lnr lnr-location fs-40 py-4 d-block"></span>
+          <h5>LOCATION</h5>
+          <p>Kolkata, India</p>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <span class="lnr lnr-clock fs-40 py-4 d-block"></span>
+          <h5>WORKING TIME</h5>
+          <p>Monday - Saturday</p>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+          <span class="lnr lnr-phone fs-40 py-4 d-block"></span>
+          <h5>CALL ME</h5>
+          <p>(+91) 6295611536</p>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
+          <span class="lnr lnr-phone fs-40 py-4 d-block"></span>
+          <h5>EMAIL</h5>
+          <p>mail@ignorecrowd.co.in</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of Contact Form Section -->
+{% include 'features.html' %} {% endblock %}
