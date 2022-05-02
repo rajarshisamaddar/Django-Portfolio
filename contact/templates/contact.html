@@ -22,77 +22,35 @@
           I want to avoid subjective pissing-matches, and favor open-minded
           collaborators where egos are out of the equation. If that all sounds
           about right, then lets for sure chat about how we can work together.
-          <br />
-          <br />
-          Feel free to drop me a line.
         </p>
       </div>
       <!-- End of Section Title -->
       <div class="row">
         <!-- Contact Form Holder -->
-        <div
-          class="col-md-8 offset-md-2 contact-form-holder mt-4"
-          data-aos="fade-up"
-        >
+        <div class="col-md-8 offset-md-2 contact-form-holder mt-4" data-aos="fade-up">
+          <h2 class="section-title">Drop Me A Message</h2>
           <form name="contact-us" action="message" method="post">
             <div class="row">
               <div class="col-md-12 form-group">
                 {% csrf_token %}
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  name="name"
-                  placeholder="Name"
-                  required
-                />
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required />
               </div>
               <div class="col-md-6 form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  required
-                />
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email" required />
               </div>
               <div class="col-md-6 form-group">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="phoneNumber"
-                  name="phoneNumber"
-                  placeholder="Phone"
-                  required
-                />
+                <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone"
+                  required />
               </div>
               <div class="col-md-12 form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="websiteUrl"
-                  name="subject"
-                  placeholder="Subject"
-                  required
-                />
+                <input type="text" class="form-control" id="websiteUrl" name="subject" placeholder="Subject" required />
               </div>
               <div class="col-md-12 form-group">
-                <textarea
-                  class="form-control"
-                  id="message"
-                  name="message"
-                  rows="6"
-                  placeholder="Your Message ..."
-                  required
-                ></textarea>
+                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message . . ."
+                  required></textarea>
               </div>
               <div class="col-md-12 text-center">
-                <button
-                  class="btn btn-primary btn-shadow btn-lg"
-                  type="submit"
-                  name="submit"
-                >
+                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">
                   Send Message
                 </button>
               </div>
@@ -108,7 +66,7 @@
       </div>
       <div class="row text-center mt-4">
         <div class="col-md-3" data-aos="fade-up">
-          <span class="lnr lnr-location fs-40 py-4 d-block"></span>
+          <span class="lnr lnr-home fs-40 py-4 d-block"></span>
           <h5>LOCATION</h5>
           <p>Kolkata, India</p>
         </div>
@@ -118,14 +76,14 @@
           <p>Monday - Saturday</p>
         </div>
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-          <span class="lnr lnr-phone fs-40 py-4 d-block"></span>
+          <span class="lnr lnr-phone-handset fs-40 py-4 d-block"></span>
           <h5>CALL ME</h5>
-          <p>(+91) 6295611536</p>
+          <p>(+91) 6295 611 536</p>
         </div>
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
-          <span class="lnr lnr-phone fs-40 py-4 d-block"></span>
+          <span class="lnr lnr-envelope fs-40 py-4 d-block"></span>
           <h5>EMAIL</h5>
-          <p>mail@ignorecrowd.co.in</p>
+          <p>ignorecrowd@gmail.com</p>
         </div>
       </div>
     </div>
