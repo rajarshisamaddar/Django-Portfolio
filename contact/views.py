@@ -32,13 +32,8 @@ def message(request):
                           phone=phoneNumber, subject=subject, message=messageR)
         contact.save()
 
-        messagedict = {
-            "Name": name,
-            "Email": email,
-            "Phone Number": phoneNumber,
-            "Subject": subject,
-            "Message": messageR
-        }
+        messagedict = "Name: "+name+"\r\r\n Email: "+email + "\r\r\n Phone Number: " + \
+            phoneNumber+"\r\r\n Subject: "+subject+"\r\r\n Message: "+messageR
 
         mail_content = str(messagedict)
         sender_address = 'ignorecrowdweb@gmail.com'
@@ -49,7 +44,7 @@ def message(request):
         message['From'] = sender_address
         message['To'] = receiver_address
         # The subject line
-        message['Subject'] = "A message recieved on Django"
+        message['Subject'] = "A message recieved on ignorecrowd.co.in"
         # The body and the attachments for the mail
         message.attach(MIMEText(mail_content, 'plain'))
         # Create SMTP session for sending the mail
@@ -58,10 +53,12 @@ def message(request):
         message2['From'] = sender_address
         message2['To'] = email
         # The subject line
-        message2['Subject'] = "Message Received"
+        message2['Subject'] = "Thank you " + \
+            name + " for your immediate response."
+
+        mail_content2 = "Dear "+name+",\r\r\n If you receive an email response immediately after sending your message, it's very likely an auto-response confirmation message. I suggest waiting until you get a reply that was not automatically generated before you reply. \r\r\n I will review your message and will be in touch with you soon to move forward with our conversation. \r\r\n Regards, \r\r\n Rajarshi Samaddar \r\r\n ignorecrowd.co.in"
         # The body and the attachments for the mail
-        message2.attach(MIMEText(
-            "Thank you for your message. This is a system-generated email you are receiving please do not reply here I will contact you ASAP. I appreciate your interest. Thank you again.", 'plain'))
+        message2.attach(MIMEText(mail_content2, 'plain'))
         # Create SMTP session for sending the mail
 
         session = smtplib.SMTP('smtp.gmail.com', 587)  # use gmail with port
