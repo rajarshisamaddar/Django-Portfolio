@@ -9,3 +9,5 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('root/', admin.site.urls),
 ]
+
+handler404 = "home.views.page_not_found_view"

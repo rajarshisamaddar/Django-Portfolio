@@ -1,9 +1,6 @@
+{% load static %}
 <!-- Features Section-->
-<section
-  id="cta"
-  class="bg-fixed overlay"
-  style="background-image: url(img/bg.jpg)"
->
+<section id="cta" class="bg-fixed overlay" style="background-image: url(img/bg.jpg)">
   <div class="container">
     <div class="section-content" data-aos="fade-up">
       <div class="row">
@@ -15,7 +12,8 @@
             I believe the computer was born to solve problems that did not exist
             before.
           </p>
-          <a class="btn btn-outline-primary btn-lg" href="/">ignorecrowd</a>
+          <a class="btn btn-outline-primary btn-lg" href="{% static 'resume/Resume.pdf' %}" download="Resume"
+            target="_blank">resume PDF</a>
         </div>
       </div>
     </div>

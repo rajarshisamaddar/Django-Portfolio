@@ -12,16 +12,11 @@
       <div class="title-wrap" data-aos="fade-up">
         <h2 class="section-title">Get In Touch</h2>
         <p class="section-sub-title">
-          I'm seeking out opportunities to collaborate with companies / agencies
-          / individuals, not just work for them. I want to bring my collective
-          programming experience to the table where we can work together to
-          solve real business-problems in a way that optimizes all of our
-          respective experience and knowledge.
+          {% for x in contactparagraph %}
           <br />
           <br />
-          I want to avoid subjective pissing-matches, and favor open-minded
-          collaborators where egos are out of the equation. If that all sounds
-          about right, then lets for sure chat about how we can work together.
+          {{ x.paragraph }}
+          {% endfor %}
         </p>
       </div>
       <!-- End of Section Title -->
@@ -60,6 +55,7 @@
         <!-- End of Contact Form Holder -->
       </div>
     </div>
+    {% for x in contactfindme %}
     <div class="section-content pt-0">
       <div class="title-wrap" data-aos="fade-up">
         <h2 class="section-title">Where To Find Me?</h2>
@@ -68,25 +64,26 @@
         <div class="col-md-3" data-aos="fade-up">
           <span class="lnr lnr-home fs-40 py-4 d-block"></span>
           <h5>LOCATION</h5>
-          <p>Kolkata, India</p>
+          <p>{{ x.location }}</p>
         </div>
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
           <span class="lnr lnr-clock fs-40 py-4 d-block"></span>
           <h5>WORKING TIME</h5>
-          <p>Monday - Saturday</p>
+          <p>{{ x.working_time }}</p>
         </div>
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
           <span class="lnr lnr-phone-handset fs-40 py-4 d-block"></span>
           <h5>CALL ME</h5>
-          <p>(+91) 6295 611 536</p>
+          <p>{{ x.call_me }}</p>
         </div>
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
           <span class="lnr lnr-envelope fs-40 py-4 d-block"></span>
           <h5>EMAIL</h5>
-          <p>ignorecrowd@gmail.com</p>
+          <p>{{ x.email }}</p>
         </div>
       </div>
     </div>
+    {% endfor %}
   </div>
 </section>
 <!-- End of Contact Form Section -->

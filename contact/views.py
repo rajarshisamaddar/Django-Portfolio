@@ -5,12 +5,18 @@ from django.template import loader
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from .models import Contact
+from .models import Contact, ContactFindMe, ContactParagraph
 
 
 def contact(request):
+    contactparagraph = ContactParagraph.objects.all().values()
+    contactfindme = ContactFindMe.objects.all().values()
+    context = {
+        'contactparagraph': contactparagraph,
+        'contactfindme': contactfindme,
+    }
     template = loader.get_template('contact.html')
-    return HttpResponse(template.render())
+    return HttpResponse(template.render(context, request))
 
 
 @csrf_exempt
