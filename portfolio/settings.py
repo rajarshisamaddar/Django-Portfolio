@@ -18,7 +18,6 @@ ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = ['https://ignorecrowd.co.in']
 
-
 # Application definition
 
 INSTALLED_APPS = [
