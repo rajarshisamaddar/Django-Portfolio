@@ -7,7 +7,7 @@ class Work(models.Model):
     title = models.CharField(max_length=255)
     startDate = models.CharField(max_length=255)
     endDate = models.CharField(max_length=255)
-    description = models.CharField(max_length=555)
+    description = models.CharField(max_length=1200)
     github = models.CharField(max_length=255)
 
 

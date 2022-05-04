@@ -2,7 +2,7 @@ from django.db import models
 
 
 class AboutParagraph(models.Model):
-    paragraph = models.CharField(max_length=555)
+    paragraph = models.CharField(max_length=1200)
 
 
 class AboutSkill(models.Model):
@@ -14,4 +14,4 @@ class AboutSkill(models.Model):
 
 class About(models.Model):
     title = models.CharField(max_length=255)
-    description = models.CharField(max_length=555)
+    description = models.CharField(max_length=1200)
