@@ -1,13 +1,3 @@
-/*
- * Lightcase - jQuery Plugin
- * The smart and flexible Lightbox Plugin.
- *
- * @author		Cornel Boppart <cornel@bopp-art.com>
- * @copyright	Author
- *
- * @version		2.5.0 (11/03/2018)
- */
-
 ;(function ($) {
 
 	'use strict';
