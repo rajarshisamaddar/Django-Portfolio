@@ -12,9 +12,23 @@
             I believe the computer was born to solve problems that did not exist
             before.
           </p>
-          <a class="btn btn-outline-primary btn-lg" href="{% static 'resume/Resume.pdf' %}" download="Resume"
-            target="_blank">resume PDF</a>
+
+          <div class="d-flex justify-content-center col-md-12">
+            <h3 class="mb-12">
+              Subscribe to receive newsletter
+            </h3>
+          </div>
+          <div class="d-flex justify-content-center col-md-12">
+            <form class="d-flex" action="/subscribe" method="post">
+              {% csrf_token %}
+              <input class="form-control me-2 mb-6" name="email" id="email" type="email"
+                placeholder="Your email address" aria-label="Search">
+              <button class="btn btn-outline-primary btn-sm ml-2" type="submit">Subscribe</button>
+            </form>
+          </div>
+
         </div>
+
       </div>
     </div>
   </div>
