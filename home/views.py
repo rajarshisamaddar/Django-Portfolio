@@ -3,6 +3,7 @@ from django.template import loader
 from django.shortcuts import redirect, render
 from home.models import Subscriber
 from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponseRedirect
 
 
 def index(request):
@@ -16,13 +17,7 @@ def subscribe(request):
         email = request.POST['email']
         subscribe = Subscriber(email=email)
         subscribe.save()
-        return redirect('/')
-
-# def resume(request):
-#     pdf_folder = '/home/galander/Desktop/Projekty/django-pdf-generator/django-pdf/generator/static/pdfs'
-#     response = HttpResponse(pdf_folder, content_type='application/pdf')
-#     response['Content-Disposition'] = 'attachment; filename="nowy.pdf"'
-#     return HttpResponse(template.render())
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 def page_not_found_view(request, exception):
