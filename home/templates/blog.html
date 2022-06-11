@@ -27,6 +27,15 @@
                         </h6>
                     </div>
                     <p>{{blogPost.content|safe}}</p>
+                    <div class="mt-5">
+                        <div class="fb-like" data-href="https://ignorecrowd.co.in/{{blogPost.slug}}" data-width=""
+                            data-layout="button_count" data-action="like" data-size="large" data-share="false"></div>
+                    </div>
+                    <div class="mt-5">
+                        <div class="fb-comments" data-href="https://ignorecrowd.co.in/{{blogPost.slug}}" data-width=""
+                            data-numposts="50">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
