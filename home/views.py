@@ -1,11 +1,6 @@
-from email import message
-from pyexpat.errors import messages
-from turtle import title
 from django.http import HttpResponse
 from django.template import loader
-from django.shortcuts import redirect, render
 from home.models import Blog, Subscriber
-from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect
 
 

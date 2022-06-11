@@ -1,4 +1,3 @@
-from distutils.log import error
 from tabnanny import check
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import redirect
