@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'contact',
     'work',
     'about',
+    'ckeditor',
     # 'home.apps.HomeConfig'
 ]
 
@@ -70,15 +71,8 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'PORTFOLIO',
-        'USER': 'ignorecrowd',
-        'PASSWORD': 'ignorecrowdRajpas1',
-        'HOST': 'ignorecrowd.ckmzbd9piczv.ap-south-1.rds.amazonaws.com',
-        'PORT': '3306',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'database',
     }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',

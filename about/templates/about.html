@@ -65,17 +65,19 @@
         </div>
     </div>
     <hr><br>
-    <div class="row text-center">
-        {% for x in about %}
-        {% spaceless %}
-        <div class="col-md-4 col-sm-6" data-aos="fade-up">
-            <h5 class="mb-4">{{ x.title }}</h5>
-            <p>{{ x.description }}</p>
-            <p><a class="btn btn-link" href="" role="button">View details [Dev]</a></p>
+    <div class="m-2">
+        <div class="row text-center">
+            {% for x in about %}
+            {% spaceless %}
+            <div class="col-md-4 col-sm-6" data-aos="fade-up">
+                <h5 class="mb-4">{{ x.title }}</h5>
+                <p>{{ x.description }}</p>
+                <p><a class="btn btn-link" href="" role="button">View details [Dev]</a></p>
+            </div>
+            <!-- /.col-md-4 col-sm-6  -->
+            {% endspaceless %}
+            {% endfor %}
         </div>
-        <!-- /.col-md-4 col-sm-6  -->
-        {% endspaceless %}
-        {% endfor %}
     </div>
 </section>
 {% include 'features.html' %}

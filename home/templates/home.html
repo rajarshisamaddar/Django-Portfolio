@@ -1,11 +1,7 @@
 {% extends '__base.html' %} {% block __base %} {% load static %}
 <div class="jumbotron d-flex align-items-center">
   <div class="container text-center">
-    <h1 class="display-1 mb-4">
-      HELLO!<br />
-      I AM <br />
-      RAJARSHI
-    </h1>
+    <h1 class="display-1 mb-4">devDesk</h1>
   </div>
   <div class="rectangle-1"></div>
   <div class="rectangle-2"></div>
@@ -27,4 +23,45 @@
     <img src="{% static 'img/obj_triangle.png' %}" alt="" />
   </div>
 </div>
+<br>
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+      {% for x in blog %}
+      <!-- Post preview-->
+      <div class="post-preview">
+        <h2 class="post-title">{{x.title |safe}}</h2>
+        <div class="p">
+          <h6>
+            <span class="badge badge-info">{{x.tag1}}</span>
+            <span class="badge badge-info">{{x.tag2}}</span>
+            <span class="badge badge-info">{{x.tag3}}</span>
+            <span class="badge badge-info">{{x.tag4}}</span>
+            <span class="badge badge-info">{{x.tag5}}</span>
+            <span class="badge badge-info">{{x.tag6}}</span>
+          </h6>
+        </div>
+        <p class="post-subtitle">{{x.content | truncatechars:300 |safe}}</p>
+        <p class="post-meta">
+          Posted by
+          <a href="/about">Rajarshi Samaddar</a>
+          on {{x.timeStamp}}
+        </p>
+
+        <a class="btn btn-primary" href="/{{x.slug}}">Continue reading</a>
+      </div>
+      <!-- Divider-->
+      <hr class="my-4" />
+      {% endfor %}
+      <!-- Pager-->
+      <!-- {% if blog|length > 0 %}
+      <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older
+          Posts
+          →</a>
+      </div>
+      {% endif %} -->
+    </div>
+  </div>
+</div>
+{% include 'features.html' %}
 {% endblock %}

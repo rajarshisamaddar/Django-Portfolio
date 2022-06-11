@@ -1,0 +1,36 @@
+{% extends '__base.html' %} {% block __base %} {% load static %}
+</div>
+<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/blog-1.jpg)">
+    <div class="container text-center">
+        <h1 class="display-2 mb-4">Read Blog</h1>
+    </div>
+</div> <!-- Contact Form Section -->
+<section id="single-content" class="bg-white">
+    <div class="container">
+        <div class="section-content blog-content">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 mt-4">
+                    <h3>{{blogPost.title}}</h3>
+                    <p class="post-meta">
+                        Posted by
+                        <a href="/about">Rajarshi Samaddar</a>
+                        on {{blogPost.timeStamp}}
+                    </p>
+                    <div class="p">
+                        <h6>
+                            <span class="badge badge-info">{{blogPost.tag1}}</span>
+                            <span class="badge badge-info">{{blogPost.tag2}}</span>
+                            <span class="badge badge-info">{{blogPost.tag3}}</span>
+                            <span class="badge badge-info">{{blogPost.tag4}}</span>
+                            <span class="badge badge-info">{{blogPost.tag5}}</span>
+                            <span class="badge badge-info">{{blogPost.tag6}}</span>
+                        </h6>
+                    </div>
+                    <p>{{blogPost.content|safe}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include 'features.html' %}
+{% endblock %}

@@ -12,7 +12,6 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
 }
-
 h1,
 h2,
 h3,
@@ -201,7 +200,12 @@ section {
   text-transform: capitalize;
   transition: all 0.3s ease 0s;
 }
-
+.badge-info {
+  display: inline-block;
+  background-color: #ff00cc;
+  border-color: #ff00cc;
+  color: #fff;
+}
 .btn-primary {
   display: inline-block;
   background-color: #ff00cc;

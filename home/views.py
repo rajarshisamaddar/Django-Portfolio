@@ -1,17 +1,49 @@
+from email import message
+from pyexpat.errors import messages
+from turtle import title
 from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import redirect, render
-from home.models import Subscriber
+from home.models import Blog, Subscriber
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect
 
 
 def index(request):
+    blog = Blog.objects.all().values()
+    context = {
+        'blog': blog,
+    }
     template = loader.get_template('home.html')
-    return HttpResponse(template.render())
+    return HttpResponse(template.render(context, request))
 
 
-@csrf_exempt
+def blog(request, slug):
+    blogPost = Blog.objects.filter(slug=slug).first()
+    context = {
+        'blogPost': blogPost,
+    }
+    template = loader.get_template('blog.html')
+    return HttpResponse(template.render(context, request))
+
+
+def search(request):
+    if request.method == "GET":
+        query = request.GET['query']
+        if len(query) > 75:
+            blogPost = Blog.objects.none()
+        else:
+            allBlogTitle = Blog.objects.filter(title__icontains=query)
+            allBlogContent = Blog.objects.filter(content__icontains=query)
+            blogPost = allBlogContent.union(allBlogTitle)
+        context = {
+            'blogPost': blogPost,
+            'query': query,
+        }
+        template = loader.get_template('search.html')
+        return HttpResponse(template.render(context, request))
+
+
 def subscribe(request):
     if request.method == "POST":
         email = request.POST['email']
