@@ -10,7 +10,7 @@
         <div class="section-content blog-content">
             <div class="row">
                 <div class="col-md-8 offset-md-2 mt-4">
-                    <h3>{{blogPost.title}}</h3>
+                    <h1>{{blogPost.title}}</h1>
                     <p class="post-meta">
                         Posted by
                         <a href="/about">Rajarshi Samaddar</a>
@@ -27,9 +27,14 @@
                         </h6>
                     </div>
                     <p>{{blogPost.content|safe}}</p>
+                    <hr>
                     <div class="mt-5">
-                        <div class="fb-like" data-href="https://ignorecrowd.co.in/{{blogPost.slug}}" data-width=""
-                            data-layout="button_count" data-action="like" data-size="large" data-share="false"></div>
+                        <h3>Please hit the like button
+                            <div class="fb-like" data-href="https://ignorecrowd.co.in/{{blogPost.slug}}" data-width=""
+                                data-layout="button_count" data-action="like" data-size="large" data-share="false">
+                            </div>
+                        </h3>
+
                     </div>
                     <div class="mt-5">
                         <div class="fb-comments" data-href="https://ignorecrowd.co.in/{{blogPost.slug}}" data-width=""

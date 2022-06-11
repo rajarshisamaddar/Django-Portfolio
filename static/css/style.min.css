@@ -1,6 +1,6 @@
 /*=====  ignorecrowd.co.in  ======*/
 /*===============================
-=            Rajarshi Samaddar CSS           =
+=     Rajarshi Samaddar CSS    =
 ===============================*/
 html,
 body {
@@ -578,10 +578,6 @@ section {
   position: relative;
 }
 
-/*=====  End of TESTI  ======*/
-/*=================================
-=            PORTFOLIO            =
-=================================*/
 .filter-button-group {
   margin-bottom: 15px;
 }
@@ -654,10 +650,6 @@ section {
   text-align: center;
 }
 
-/*=====  End of PORTFOLIO  ======*/
-/*===============================
-=            SideNav            =
-===============================*/
 .sidenav {
   height: 100%;
   width: 0;
@@ -726,9 +718,6 @@ section {
   color: #fff;
 }
 
-/*==============================
-=            SKILLS            =
-==============================*/
 .skill-item {
   width: 100%;
   position: relative;
@@ -749,10 +738,6 @@ section {
   transition: all 4s;
 }
 
-/*=====  End of SKILLS  ======*/
-/*============================
-=            BLOG            =
-============================*/
 .blog-item {
   transition: all 0.3s ease-in-out;
   background-color: #f7f8f9;
@@ -836,10 +821,6 @@ section {
   margin: 15px 0 15px 15px;
 }
 
-/*=====  End of work  ======*/
-/*====================================
-=            FORM CONTROL            =
-====================================*/
 .form-control:focus {
   border-color: #ff00cc;
   box-shadow: 0 0 0 0.2rem rgba(253, 101, 90, 0.25);

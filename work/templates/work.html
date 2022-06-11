@@ -34,18 +34,21 @@
                         <div class="col-md-4 blog-item-wrapper" data-aos="fade-up">
                             <div class="blog-item">
                                 <div class="blog-img">
-                                    <a href="single.html"><img src="{% static 'img/'|add:x.file_name %}"></a>
+                                    <img src="{{x.imageUrl}}">
                                 </div>
                                 <div class="blog-text">
                                     <div class="blog-tag">
-                                        <a href="#">
-                                            <h6><small>{{ x.type }}</small></h6>
-                                        </a>
+                                        <h6>
+                                            <span class="badge badge-info mr-1">{{ x.tag1 }}</span>
+                                            <span class="badge badge-info mr-1">{{ x.tag2 }}</span>
+                                            <span class="badge badge-info mr-1">{{ x.tag3 }}</span>
+                                            <span class="badge badge-info mr-1">{{ x.tag4 }}</span>
+                                            <span class="badge badge-info mr-1">{{ x.tag5 }}</span>
+                                            <span class="badge badge-info mr-1">{{ x.tag6 }}</span>
+                                        </h6>
                                     </div>
                                     <div class="blog-title">
-                                        <a href="single.html">
-                                            <h4>{{ x.title }}</h4>
-                                        </a>
+                                        <h4>{{ x.title }}</h4>
                                     </div>
                                     <div class="blog-meta">
                                         <p class="blog-date">{{ x.startDate }}</p> to
@@ -55,7 +58,7 @@
                                         <p>{{ x.description }}</p>
                                     </div>
                                     <div class="blog-author">
-                                        <p>by Rajarshi Samaddar</p>
+                                        <p>by <span><a href="/about/">Rajarshi Samaddar</a></span></p>
                                     </div>
                                     <div class="blog-share-wrapper">
                                         <a class="blog-share" href={{ x.github }} target="_blank">
