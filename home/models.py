@@ -8,6 +8,7 @@ class Subscriber(models.Model):
 
 class Blog(models.Model):
     title = models.CharField(max_length=150)
+    thumbnail = models.CharField(max_length=1550, blank=True)
     tag1 = models.CharField(max_length=25, blank=True)
     tag2 = models.CharField(max_length=25, blank=True)
     tag3 = models.CharField(max_length=25, blank=True)

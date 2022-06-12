@@ -22,11 +22,15 @@
                         <p>Try more general keywords.</p>
                     </li>
                 </ul>
+                <img src="https://d2c24hxshwy67t.cloudfront.net/work/5eeea355389655.59822ff824b72.gif">
                 {% endif %}
                 {% for x in blogPost %}
                 <!-- Post preview-->
-                <div class="post-preview">
-                    <h1 class="post-title">{{x.title |safe}}</h1>
+                <div class="post-preview border-0 shadow-lg p-3 mb-5 bg-white rounded" data-aos="fade-up">
+                    <div class="post-img">
+                        <img src="{{x.thumbnail}}">
+                    </div>
+                    <h1 class="post-title mt-2">{{x.title}}</h1>
                     <div class="p">
                         <h6>
                             <span class="badge badge-info">{{x.tag1}}</span>
@@ -37,7 +41,7 @@
                             <span class="badge badge-info">{{x.tag6}}</span>
                         </h6>
                     </div>
-                    <p class="post-subtitle">{{x.content | truncatechars:300 |safe}}</p>
+                    <p class="post-subtitle">{{x.content | truncatechars:400 |safe}}</p>
                     <p class="post-meta">
                         Posted by
                         <a href="/about">Rajarshi Samaddar</a>
@@ -46,8 +50,6 @@
 
                     <a class="btn btn-primary" href="/{{x.slug}}">Continue reading</a>
                 </div>
-                <!-- Divider-->
-                <hr class="my-4" />
                 {% endfor %}
                 <!-- Pager-->
                 <!-- {% if blogPost|length > 0 %}

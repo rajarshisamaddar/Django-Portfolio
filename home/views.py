@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 
 
 def index(request):
-    blog = Blog.objects.all().values()
+    blog = Blog.objects.all().values().order_by('?')
     context = {
         'blog': blog,
     }
